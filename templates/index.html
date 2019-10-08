@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="latin-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Obtenez votre horoscope!</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../static/css/business-frontpage.css" rel="stylesheet">
+
+  <!-- JQuery styles -->
+  <link href="../static/jqueryui/jquery-ui.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Hysteric Witches Inc.</a>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+     <!--  <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div> -->
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">{{titre}}</h1>
+          <p class="lead mb-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non possimus ab labore provident mollitia. Id assumenda voluptate earum corporis facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas ipsam.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    
+      <div id="response" class="row">
+        <div class="col-md-8 mb-5">
+          <h2>Vos résultats</h2>
+          <hr>
+          <p id="theName"></p>
+          <p id="theFirstName"></p>
+          <p id="theDOB"></p>
+         <!--  <p id="mode"></p>
+          <p id="verdict"></p> -->
+          <!-- <p>{{titre}}</p>
+          <p>{{result}}</p> -->
+          <p>Pour obtenir votre horoscope personnalisé, téléchargé directement des astres grâce à notre connexion cosmique unique au monde, remplissez simplement les champs demandés.</p>
+        </div>
+      </div>
+
+    
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Votre horoscope en un clic!</h2>
+        <hr>
+        <p>Pour obtenir votre horoscope personnalisé, téléchargé directement des astres grâce à notre connexion cosmique unique au monde, remplissez simplement les champs demandés.</p>
+        <form id="bullshitRequestForm">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Nom" pattern = "^[a-zA-Z0-9- ]+$" title="Les accents ne sont pas tolérés">
+          </div>
+          <div class="form-group">
+            <label for="inputFstName">Prénom</label>
+            <input type="text" class="form-control" id="inputFstName" name="inputFstName" placeholder="Prénom" pattern = "^[a-zA-Z0-9- ]+$" title="Les accents ne sont pas tolérés">
+          </div>
+          <div class="form-group">
+            <label for="inputDOB">Date de naissance</label>
+            <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Date de naissance" pattern="^((0|1)\d{1})/((0|1|2|3)\d{1})/((19|20)\d{2})" title="Date invalide!">
+          </div>
+          <!-- <button type="submit" class="btn btn-primary" id="getHoroscope">Obtenir mon horoscope!</button> -->
+          <button class="btn btn-primary" type="button" id="getHoroscope">Obtenir mon horoscope!</button>
+        </form>
+      </div>
+
+    
+
+      <div class="col-md-4 mb-5">
+        <h2>Contactez-nous!</h2>
+        <hr>
+        <address>
+          <strong>Hysteric Witches Inc.</strong>
+          <br>555, Boulevard de l'Université
+          <br>Bureau P4-3270
+          <br>Chicoutimi, QC.
+          <br>G7H 2B1
+          <br>
+        </address>
+        <address>
+          <abbr title="Téléphone:">T:</abbr>
+          (418) 545-5011 poste 2225
+          <br>
+          <abbr title="Courriel">M:</abbr>
+          <a href="mailto:#">info@hystericwitches.com</a>
+        </address>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="../static/images/fortuneTeller.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Le saviez-vous?</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+          </div>
+          <!-- <div class="card-footer">
+            <a href="#" class="btn btn-primary">Find Out More!</a>
+          </div> -->
+        </div>
+      </div>
+      <!-- <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Hysteric Witches Inc. 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../static/jquery/jquery.min.js"></script>
+  <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="../static/jqueryui/external/jquery/jquery.js"></script> -->
+  <script src="../static/jqueryui/jquery-ui.js"></script>
+  <script src="../static/javascript/index.js"></script>
+
+</body>
+
+</html>

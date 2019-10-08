@@ -1,39 +1,70 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
 
-# hello.py by Jean-Sébastien St-Pierre STPJ15018206, September 2019
+# app.py by Jean-Sébastien St-Pierre STPJ15018206, October 2019
 # This is the logic implementation for the basic flask server
 
-from flask import Flask, request, render_template
-import hashlib
-import re
+from flask import Flask, request, render_template, jsonify
+import re, json
+
 
 app = Flask(__name__)
 
 # Basic default route
 @app.route('/', methods = ['GET', 'POST'])
 def accueil():
-	secretHash = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"
-	titre = "Découvrez le code secret!!!"
+	titre = "Les astres chuchottent à votre oreille!"
 	
 	# Data processing
 	if request.method == 'POST':
-		answer = request.form.get('ans')
-		mode = request.form.get('algorithmes')
+		print("beep")
+		name = request.form.get('inputName')
+		fstName = request.form.get('inputFstName')
+		bthDate = request.form.get('inputDOB')
         #Regex server-side validation for alphanumeric-only user input
-		pattern = "[a-zA-Z0-9]+$"
-		if not re.match(pattern, answer):
-			return render_template('noWay.tpl', titre = "Nooooooo!", message = "Tu m'auras pas comme ça!!  ;)")
-		hashed = hashThisShit(answer, mode)
-		if hashed == secretHash:
-			verdict = "correspond"
-		else:
-			verdict = "ne correspond pas"
+		# namePattern = "[a-zA-Z0-9- ]+$"
+		# bthdatePattern = "^((0|1)\\d{1})/((0|1|2|3)\\d{1})/((19|20)\\d{2})"
+		# if not re.match(pattern, answer):
+		# 	return render_template('noWay.tpl', titre = "Nooooooo!", message = "Tu m'auras pas comme ça!!  ;)")
+		# hashed = hashThisShit(answer, mode)
+		# if hashed == secretHash:
+		# 	verdict = "correspond"
+		# else:
+		# 	verdict = "ne correspond pas"
 			
-		return render_template('accueil.tpl', titre = titre, result = hashed, mode = mode, verdict = verdict)
+		return render_template('index.html', titre = titre, result = name, mode = fstName, verdict = bthDate)
 		
 	else :
-		return render_template('accueil.tpl', titre = titre)
+		return render_template('index.html', titre = titre)
+
+
+@app.route('/horoscope', methods = ['GET', 'POST'])
+def horoscope():
+	titre = "Écoutez le chant des étoiles"
+	
+	# Data processing
+	if request.method == 'POST':
+		name = request.form['inputName']
+		fstName = request.form['inputFstName']
+		bthDate = request.form['inputDOB']
+        #Regex server-side validation for alphanumeric-only user input
+		# namePattern = "[a-zA-Z0-9- ]+$"
+		# bthdatePattern = "^((0|1)\\d{1})/((0|1|2|3)\\d{1})/((19|20)\\d{2})"
+		# if not re.match(pattern, answer):
+		# 	return render_template('noWay.tpl', titre = "Nooooooo!", message = "Tu m'auras pas comme ça!!  ;)")
+		# hashed = hashThisShit(answer, mode)
+		# if hashed == secretHash:
+		# 	verdict = "correspond"
+		# else:
+		# 	verdict = "ne correspond pas"
+		#return jsonify(tite = titre, result = request.form['inputName'], mode = request.form['inputFstName'], verdict = request.form['inputDOB'] )
+		#test = jsonify(titre = titre, fstName = fstName)
+		
+		return json.dumps({'titre':titre, 'name':name, 'fstName': fstName, 'bthDate': bthDate})
+		
+	else :
+		return render_template('index.html', titre = "Fuck you all")
+
 
 # Error 404 management for any invalid GET request
 @app.errorhandler(404)
@@ -59,4 +90,4 @@ def hashThisShit(ans, mode):
 	
 # App launcher in https mode with SSL keys ID
 if __name__ == '__main__':
-	app.run(ssl_context=('travail2_cert.crt', 'travail2_pv.key'))
+	app.run(debug=True, ssl_context=('travail3_cert.crt', 'travail3_pv.key'))
