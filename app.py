@@ -28,9 +28,7 @@ def horoscope():
 		fstName = request.form['inputFstName']
 		bthDate = request.form['inputDOB']
 		validated = (validateInput(name, fstName, bthDate))
-		print(validated)
 		mysign = getSign(bthDate)
-		print(mysign)
 		requestHoroscope = getAztro(mysign)
 		myHoroscope = format(requestHoroscope.json()["description"])
 		
