@@ -22,7 +22,6 @@ $(document).ready(function()
 		      	window.alert((obj.ErrorCodes).join(""));
 		      	return;
 		      }
-		      window.alert(obj)
 		      $("#myform").toggle();
 		      $("#response").toggle();
 		      $("#theSign").html(obj.sign);
