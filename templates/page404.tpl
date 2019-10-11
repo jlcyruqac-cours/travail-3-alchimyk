@@ -1,6 +1,4 @@
-﻿<!-- page404.tpl by Jean-Sébastien St-Pierre STPJ15018206, September 2019
-     This page is displayed by the flask server following any invalid GET request -->
-	 
+﻿ 
 <!DOCTYPE html>
 <html>
 <html lang="fr">

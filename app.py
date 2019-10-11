@@ -33,7 +33,7 @@ def horoscope():
 		myHoroscope = format(requestHoroscope.json()["description"])
 		
 		return json.dumps({'name':name, 'fstName': fstName, 'bthDate': bthDate,
-		 'ErrorCodes': validated, 'sign': mysign, 'horoscope': myHoroscope})
+		 	'ErrorCodes': validated, 'sign': mysign, 'horoscope': myHoroscope})
 		
 	else :
 		return render_template('index.html', titre = titre)

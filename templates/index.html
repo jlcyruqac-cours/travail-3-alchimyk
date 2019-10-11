@@ -11,61 +11,36 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- Bootstrap core CSS -->
-  <link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="../static/css/business-frontpage.css" rel="stylesheet">
+  <link href="css/business-frontpage.css" rel="stylesheet">
 
   <!-- JQuery styles -->
-  <link href="../static/jqueryui/jquery-ui.css" rel="stylesheet">
+  <link href="jqueryui/jquery-ui.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Hysteric Witches Inc.</a>
-      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
-     <!--  <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div> -->
     </div>
   </nav>
 
-  <!-- Header -->
   <header class="bg-primary py-5 mb-5">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
           <h1 class="display-4 text-white mt-5 mb-2">{{titre}}</h1>
-          <p class="lead mb-5 text-white-50">Ressentez les pulsations de l'univers vibrer au plus profond de votre être</p>
+          <p class="lead mb-5 text-white-50">Ressentez vibrer les pulsations de l'univers au plus profond de votre être</p>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Page Content -->
   <div class="container">
-
     
       <div id="response" style="display:none" class="row">
         <div class="col-md-8 mb-5">
@@ -84,13 +59,13 @@
           <a id="goBack" href="/"> Retour à l'accueil</a>
         </div>
       </div>
-
     
     <div id="myform" class="row">
       <div class="col-md-8 mb-5">
         <h2>Votre horoscope en un clic!</h2>
         <hr>
         <p>Pour obtenir votre horoscope personnalisé, téléchargé directement des astres grâce à notre connexion cosmique unique au monde, remplissez simplement les champs demandés.</p>
+
         <form id="bullshitRequestForm">
           <div class="form-group">
             <label for="name">Nom</label>
@@ -104,12 +79,10 @@
             <label for="inputDOB">Date de naissance</label>
             <input type="text" class="form-control" id="inputDOB" name="inputDOB" placeholder="Date de naissance" pattern="^((0|1)\d{1})/((0|1|2|3)\d{1})/((19|20)\d{2})" title="Date invalide!">
           </div>
-          <!-- <button type="submit" class="btn btn-primary" id="getHoroscope">Obtenir mon horoscope!</button> -->
           <button class="btn btn-primary" type="button" id="getHoroscope">Obtenir mon horoscope!</button>
         </form>
-      </div>
 
-    
+      </div>
 
       <div class="col-md-4 mb-5">
         <h2>Contactez-nous!</h2>
@@ -122,6 +95,7 @@
           <br>G7H 2B1
           <br>
         </address>
+
         <address>
           <abbr title="Téléphone:">T:</abbr>
           (418) 545-5011 poste 2225
@@ -131,22 +105,22 @@
         </address>
       </div>
     </div>
-    <!-- /.row -->
 
     <div class="row">
       <div class="col-md-4 mb-5">
         <div class="card h-100">
-          <img class="card-img-top" src="../static/images/fortuneTeller.jpg" alt="">
+          <img class="card-img-top" src="images/fortuneTeller.jpg" alt="">
           <div class="card-body">
             <h4 class="card-title">Le saviez-vous?</h4>
-            <p class="card-text">Vous êtes une énergie si pure que le cosmos vous contemple d'un regard jaloux.  La science a prouvé que votre dimension quantique...</p>
+            <p class="card-text">Vous êtes une énergie si pure que les astres vous contemplent d'un regard jaloux.  La science a prouvé que votre dimension quantique...</p>
             <a id="fuke"> Read more --></a>
           </div>
         </div>
       </div>
+
       <div class="col-md-4 mb-5">
         <div class="card h-100">
-          <img class="card-img-top" src="../static/images/crystalBall.jpg" alt="v">
+          <img class="card-img-top" src="images/crystalBall.jpg" alt="v">
           <div class="card-body">
             <h4 class="card-title">La boule de crystal</h4>
             <p class="card-text">On me demande souvent comment je peux passer ma vie à fixer mes boules.  Et bien la réponse en surprendra plusieurs.  À ma naissance, j'ai manqué d'air pendant de longues minutes et...</p>
@@ -154,9 +128,10 @@
           </div>
         </div>
       </div>
+
       <div class="col-md-4 mb-5">
         <div class="card h-100">
-          <img class="card-img-top" src="../static/images/jojo.jpg" alt="q">
+          <img class="card-img-top" src="images/jojo.jpg" alt="q">
           <div class="card-body">
             <h4 class="card-title">Je sais tout de vous</h4>
             <p class="card-text">Vous est-il déjà arrivé de vous souvenir de quelque chose qui n'était jamais arrivé?  C'est ce qui se produit lorsque le cosmos veut vous...</p>
@@ -165,25 +140,18 @@
         </div>
       </div>
     </div>
-    <!-- /.row -->
 
   </div>
-  <!-- /.container -->
-
-  <!-- Footer -->
+  
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Hysteric Witches Inc. 2019</p>
     </div>
-    <!-- /.container -->
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="../static/jquery/jquery.min.js"></script>
-  <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="../static/jqueryui/external/jquery/jquery.js"></script> -->
-  <script src="../static/jqueryui/jquery-ui.js"></script>
-  <script src="../static/javascript/index.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="jqueryui/jquery-ui.js"></script>
+  <script src="javascript/index.js"></script>
 
 </body>
 
