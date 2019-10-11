@@ -129,4 +129,5 @@ def myErrorHandle(e):
 	
 # App launcher in https mode with SSL keys ID
 if __name__ == '__main__':
-	app.run(debug=True, ssl_context=('travail3_cert.crt', 'travail3_pv.key'))
+	#app.run(debug=True, ssl_context=('travail3_cert.crt', 'travail3_pv.key'))
+	app.run(debug=True)
