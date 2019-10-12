@@ -19,7 +19,7 @@ RUNNING INSTRUCTIONS:
 		- UNIX-BASED OS: Type \bin\activate and press Enter
 		- WINDOWS USERS: Type .\Scripts\activate and press Enter
 - Install all the dependancies by typing the following command: "pip install -r requirements.txt"
-- Download the appropriate Nginx version for your OS and extract to the root
+- Download the appropriate Nginx version for your OS and extract TO THE ROOT! (very important if you want to live your life as God 	intended it)
 - From root/travail-3-alchimyk/nginx, copy the 2 folders (conf + static) to the new root/nginx folder, replacing actual files
 - Type "python app.py" and press Enter to start the Flask server
 - From a new shell, go to root/nginx and type "start nginx", then hit Enter

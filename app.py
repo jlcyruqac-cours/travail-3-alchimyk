@@ -123,7 +123,7 @@ def getAztro(asign):
 @app.errorhandler(404)
 def myErrorHandle(e):
 	titre = "Erreur 404!  Page non trouvée!"
-	message = "La page " + request.base_url + " n'existe pas!"
+	message = "La page " + request.path + " n'existe pas!"
 	return render_template('page404.tpl', titre = titre, message = message)
 	
 	
